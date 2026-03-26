@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-main: #000000;
+  --color-bg-secondary: #08090a;
+  --color-bg-card: #0a0a0a;
+  --color-bg-dark: #0f0f0f;
+  --color-bg-tags: #1a1a1a;
+  --color-bg-button: #ededed;
+  --color-bg-hover: #1f1f1f;
+  --color-hover-secondary: #111;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #8f8f8f;
+  --color-sz: #0070f3;
+  --color-border-card: #252525;
+  --color-border-input: #242424;
+  --color-status-success: #50e3c2;
+  --color-status-error: #ff0000;
+  --color-status-warning: #f5a623;
+  --radius-card: 0.625rem;
+
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+:root {
+  --radius: 0.625rem;
+  --bg-main: #000000;
+  --bg-secondary: #08090a;
+  --bg-card: #0a0a0a;
+  --bg-dark: #0f0f0f;
+  --bg-tags: #1a1a1a;
+  --bg-button: #ededed;
+  --bg-hover: #1f1f1f;
+  --hover-secondary: #111;
+  --text-primary: #ffffff;
+  --text-secondary: #8f8f8f;
+  --sz: #0070f3;
+  --border-card: #252525;
+  --border-input: #242424;
+  --status-success: #50e3c2;
+  --status-error: #ff0000;
+  --status-warning: #f5a623;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-card) var(--bg-main);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-sz);
+  color: var(--text-primary);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #8f8f8f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #0070f3 0%, #50e3c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@theme {
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  --animate-float: float 3s ease-in-out infinite;
+}
