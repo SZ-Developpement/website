@@ -10,6 +10,7 @@ type TeamMember = {
   name: string;
   pseudonym: string;
   age: number;
+  stud: number;
   role: string;
   spec: string;
   school: string;
@@ -29,6 +30,7 @@ const teamMembers: TeamMember[] = [
     name: "Alexis DE JESUS",
     pseudonym: "Flytzi",
     age: 19,
+    stud: 3,
     role: "Fondateur & Developpeur Full-Stack",
     spec: "Full Stack · Architecture",
     school: "BTS SIO SLAM - 1ère année",
@@ -49,6 +51,7 @@ const teamMembers: TeamMember[] = [
     name: "Thomas MONTOUT",
     pseudonym: "Tae_Vie",
     age: 26,
+    stud: 2,
     role: "Developpeur Backend",
     spec: "Développeur backend · Game Designer",
     school: "BTS SIO SLAM - 1ère année",
@@ -69,6 +72,7 @@ const teamMembers: TeamMember[] = [
     name: "Vadym POTOTSKYI",
     pseudonym: "PROVADNIKE",
     age: 18,
+    stud: 2,
     role: "Analyste Cybersecurité",
     spec: "Cloud · IA Developpeur",
     school: "BTS SIO SISR - 1ère année",
