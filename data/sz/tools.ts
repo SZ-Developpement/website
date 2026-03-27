@@ -50,8 +50,9 @@ const routes_languages = "/icons/stack/languages/";
 const alltools = [
   { name: "Next.js", icon: `${routes_fontend}nextjs.svg`, category: "Frontend" },
   { name: "React", icon: `${routes_fontend}react.svg`, category: "Frontend" },
-  { name: "Tailwind", icon: `${routes_fontend}tailwindcss.svg`, category: "Frontend" },
+  { name: "Tailwind CSS", icon: `${routes_fontend}tailwindcss.svg`, category: "Frontend" },
   { name: "Framer Motion", icon: `${routes_fontend}framer-motion.svg`, category: "Frontend" },
+  { name: "Phaser", icon: `${routes_fontend}phaser.svg`, category: "Frontend" },
 
   { name: "Node.js", icon: `${routes_backend}nodejs.svg`, category: "Backend" },
   { name: "NestJS", icon: `${routes_backend}nestjs.svg`, category: "Backend" },
@@ -61,7 +62,7 @@ const alltools = [
 
   { name: "PostgreSQL", icon: `${routes_database}postgresql.svg`, category: "Base de données" },
   { name: "MongoDB", icon: `${routes_database}mongodb.svg`, category: "Base de données" },
-  { name: "Neon", icon: `${routes_database}neon.svg`, category: "Base de données" },
+  { name: "NeonDB", icon: `${routes_database}neon.svg`, category: "Base de données" },
   { name: "Supabase", icon: `${routes_database}supabase.svg`, category: "Base de données" },
   { name: "PlanetScale", icon: `${routes_database}planetscale.svg`, category: "Base de données" },
   { name: "Redis", icon: `${routes_database}redis.svg`, category: "Base de données" },
@@ -84,6 +85,9 @@ const alltools = [
   { name: "Cypress", icon: `${routes_tools}cypress.svg`, category: "Outils" },
   { name: "Sentry", icon: `${routes_tools}sentry.svg`, category: "Outils" },
   { name: "Storybook", icon: `${routes_tools}storybook.svg`, category: "Outils" },
+  { name: "Kali Linux", icon: `${routes_tools}Kali.svg`, category: "Outils" },
+  { name: "Cisco", icon: `${routes_tools}cisco.svg`, category: "Outils" },
+  { name: "Claude AI", icon: `${routes_tools}claude.svg`, category: "Outils" },
 
 ]
 
@@ -101,6 +105,7 @@ const allLanguages = [
   { name: "Ruby", icon: `${routes_languages}ruby.svg`},
   { name: "Swift", icon: `${routes_languages}swift.svg`},
   { name: "SQL", icon: `${routes_languages}sql.svg`},
+  { name: "Bash", icon: `${routes_languages}bash.svg`},
 ]
 
 export { toolsCategories, alltools, allLanguages };
