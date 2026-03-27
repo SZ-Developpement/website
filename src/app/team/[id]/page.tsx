@@ -11,6 +11,7 @@ import { notFound } from "next/navigation";
 import { projects } from "../../../../data/sz/projects";
 import { GithubIcon } from "@/components/icons/Github";
 import { LinkedinIcon } from "@/components/icons/linkedin";
+import Image from "next/image";
 
 const socialIcons: Record<string, React.ElementType> = {
   github: GithubIcon,
@@ -87,9 +88,13 @@ export default async function UserPage({params} : {params: Promise<{id: string}>
           </div>
 
           <div className="shrink-0">
-            <div className={`aspect-square h-50 rounded-3xl ${member.gradient} flex items-center justify-center font-display text-[56px] font-extrabold text-white relative`} style={{ boxShadow: "0 12px 48px rgba(0,0,0,0.4)" }}>
-              {member.initials}
-            </div>
+            {member.avatar ? (
+              <Image src={member.avatar} alt={member.name} width={200} height={200} unoptimized className="rounded-3xl" />
+            ) : (
+              <div className={`aspect-square h-50 rounded-3xl ${member.gradient} flex items-center justify-center font-display text-[56px] font-extrabold text-white relative`} style={{ boxShadow: "0 12px 48px rgba(0,0,0,0.4)" }}>
+                {member.initials}
+              </div>
+            )}
           </div>
         </div>
 

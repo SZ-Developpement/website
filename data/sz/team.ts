@@ -36,6 +36,7 @@ const teamMembers: TeamMember[] = [
     school: "BTS SIO SLAM - 1ère année",
     shortBio: "Étudiant en 1ère année de BTS SIO SLAM. Obsédé par Next.js et Node.js, Alexis est le cerveau derrière l'architecture de nos projets. Il code comme il respire : naturellement et avec une passion contagieuse.",
     longBio: "Alexis DE JESUS, alias Flytzi, est un jeune prodige de la programmation. À seulement 19 ans, il a déjà une maîtrise impressionnante de Next.js et Node.js, ce qui lui permet de concevoir des architectures robustes et évolutives pour nos projets. En tant que fondateur de notre équipe, Alexis apporte une vision claire et une énergie débordante à chaque étape du développement. Son approche méthodique et sa capacité à résoudre les problèmes complexes font de lui un leader naturel et un développeur Full-Stack exceptionnel.",
+    avatar: "/icons/team/alexis-djs_pp.png",
     gradient: "bg-linear-135 from-[#0070f3] to-[#00b4d8]",
     skills: ["Next.js", "React", "Node.js", "NeonDB", "Tailwind CSS"],
     languages: ["TypeScript", "SQL", "Lua", "HTML", "CSS"],
@@ -79,8 +80,8 @@ const teamMembers: TeamMember[] = [
     shortBio: "Étudiant en 1ère année de BTS SIO SISR, Vadym est passionné par la cybersécurité et l'intelligence artificielle. Il veille à ce que nos projets soient non seulement innovants, mais aussi sécurisés.",
     longBio: "Vadym POTOTSKYI, alias PROVADNIKE, est un analyste en cybersécurité et développeur d'intelligence artificielle prometteur. Actuellement étudiant en 1ère année de BTS SIO SISR, Vadym se spécialise dans la sécurisation des applications et l'intégration de solutions d'IA pour améliorer les performances et la sécurité de nos projets. Sa passion pour la cybersécurité le pousse à rester constamment informé des dernières menaces et techniques de défense, assurant ainsi que nos applications sont protégées contre les vulnérabilités. En plus de ses compétences techniques, Vadym apporte une perspective innovante à notre équipe, combinant sécurité et intelligence artificielle pour créer des solutions robustes et avant-gardistes.",
     gradient: "bg-linear-135 from-[#f5a623] to-[#f43f5e]",
-    skills: ["Kali Linux", "Cisco", "Pentesting", "IA", "React"],
-    languages: ["Python", "TypeScript", "SQL", "Bash", "HTML/CSS"],
+    skills: ["Kali Linux", "Cisco", "Claude AI", "React"],
+    languages: ["Python", "TypeScript", "SQL", "Bash", "HTML", "CSS"],
     socialLinks: {
       github: "https://github.com/PROVADNIKE",
       linkedin: "https://www.linkedin.com/in/vadym-pototskyi",

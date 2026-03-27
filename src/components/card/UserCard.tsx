@@ -4,6 +4,7 @@ import { LinkedinIcon } from "../icons/linkedin";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "../../../data/sz/projects";
+import Image from "next/image";
 
 export function UserCard({ member }: { member: TeamMember }) {
   const memberProjects = projects.filter((p) => p.members.includes(member.id));
@@ -13,9 +14,13 @@ export function UserCard({ member }: { member: TeamMember }) {
       <ArrowUpRight size={16} color="#3a3a3a" className="absolute top-6 right-6" />
 
       <div className="flex flex-row gap-4 items-center">
-        <div className={`w-16 h-16 rounded-lg ${member.gradient} flex items-center justify-center font-display text-xl font-extrabold shrink-0 `} style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.4)" }}>
-          {member.initials}
-        </div>
+        {member.avatar ? (
+          <Image src={member.avatar} alt={member.name} width={72} height={72} unoptimized className="rounded-lg" />
+        ) : (
+          <div className={`w-16 h-16 rounded-lg ${member.gradient} flex items-center justify-center font-display text-xl font-extrabold shrink-0 `} style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.4)" }}>
+            {member.initials}
+          </div>
+        )}
         <div className="flex flex-col gap-1">
           <h3 className="font-display text-xl font-extrabold">{member.name}</h3>
           <span className="text-text-secondary font-body text-sm">{member.role}</span>
@@ -48,9 +53,13 @@ export function UserCardView({ member }: { member: TeamMember }) {
   return (
     <div className="flex flex-col gap-4 justify-between bg-bg-card border border-border-card p-6 rounded-xl hover:bg-bg-dark relative hover:translate-y-0.5 transition-all duration-500 cursor-pointer">
       <div className="flex flex-row gap-4 items-center">
+        {member.avatar ? (
+          <Image src={member.avatar} alt={member.name} width={72} height={72} unoptimized className="rounded-lg" />
+        ) : (
         <div className={`w-18 h-18 rounded-lg ${member.gradient} flex items-center justify-center font-display text-xl font-extrabold shrink-0 `} style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.4)" }}>
           {member.initials}
         </div>
+        )}
         <div className="flex flex-col gap-1 min-w-0">
           <h3 className="font-display text-xl font-extrabold truncate">{member.name}</h3>
           <span className="text-text-secondary font-body text-sm">{member.role}</span>
