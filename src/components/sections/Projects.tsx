@@ -3,6 +3,7 @@ import SZSection from "../layout/SZSection";
 import { Badge } from "../ui/badge";
 import { ProjectCardHorizontal } from "../card/ProjectCard";
 import { projects } from "../../../data/sz/projects";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -13,9 +14,11 @@ export default function Projects() {
           Ce que nous avons{" "}
           <span className="gradient-text">construit.</span>
         </h2>
-        <a href="#contact" className="inline-flex items-center gap-2 font-normal text-text-secondary font-body max-w-150 text-center">
-          Démarrer votre projet <ArrowUpRight size={16} />
-        </a>
+
+        <Link href="/projects" className="inline-flex items-center gap-2 font-normal text-text-secondary font-body max-w-150 text-center hover:text-text-primary transition-colors duration-300">
+          Voir les autres projets<ArrowUpRight size={16} />
+        </Link>
+
       </div>
 
       <div className="grid grid-row gap-6">
