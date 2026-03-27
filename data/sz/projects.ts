@@ -1,3 +1,6 @@
+export type ProjectType = "solo" | "team";
+export type ProjectStatus = "En cours" | "Terminé" | "À venir" | "archived";
+
 type ProjectLinks = {
   github?: string;
   documentation?: string;
@@ -8,7 +11,8 @@ type Project = {
   id: string;
   name: string;
   category: string;
-  status: "En cours" | "Terminé" | "À venir";
+  type : ProjectType;
+  status: ProjectStatus;
   year: string;
   shortdescription: string;
   longdescription: string;
@@ -24,6 +28,7 @@ const projects: Project[] = [
     id: "01",
     name: "Absolute Stream",
     category: "Streaming · Letterbox · Web App",
+    type: "team",
     status: "En cours",
     year: "2025",
     shortdescription: "Plateforme communautaire de notation et d'avis pour films et séries, avec une interface intuitive et conviviale.",
