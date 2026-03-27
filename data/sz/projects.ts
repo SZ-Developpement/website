@@ -40,6 +40,40 @@ const projects: Project[] = [
     link: {
       github: "https://github.com/FlytziTv/Absolute_Stream",
     },
+  },
+  {
+    id: "02",
+    name: "Devis et Facture",
+    category: "Business · Invoicing · Web App",
+    type: "solo",
+    status: "Terminé",
+    year: "2026",
+    shortdescription: "Application web de gestion de devis et factures, offrant une interface intuitive pour créer, suivre et gérer les documents commerciaux.",
+    longdescription: "Devis et Facture est une application web de gestion de devis et factures, offrant une interface intuitive pour créer, suivre et gérer les documents commerciaux. L'application permet de générer des devis détaillés, de les valider et de les convertir en factures, assurant ainsi une gestion efficace des relations clients.",
+    stack: ["Next.js", "React", "Node.js", "Tailwind CSS", "Prisma", "Stripe"],
+    accent: "#2563EB",
+    gradient: "bg-linear-135 from-[#2563EB] to-[#153885]",
+    members: ["vadym-pti"],
+    link: {
+      liveDemo: "https://www.devisetfacture.fr/",
+    }
+  },
+  {
+    id: "03",
+    name: "Nono's Cook",
+    category: "Food · Recipe Sharing · Web App",
+    type: "solo",
+    status: "En cours",
+    year: "2026",
+    shortdescription: "Application web permettant aux utilisateurs de commander des gateaux personnalisés pour des occasions spéciales, avec une interface conviviale et des options de personnalisation avancées.",
+    longdescription: "Nono's Cook est une application web innovante qui permet aux utilisateurs de commander des gâteaux personnalisés pour toutes les occasions. Avec une interface conviviale, les utilisateurs peuvent choisir parmi une variété de saveurs, de designs et d'options de personnalisation pour créer le gâteau parfait. L'application offre également une partie administrative ultra complete pour gérer les commandes, les clients et les livraisons, assurant ainsi une expérience fluide du début à la fin. Grâce à des fonctionnalités avancées et une attention particulière aux détails.",
+    stack: ["Next.js", "React", "Node.js", "NeonDB", "Tailwind CSS", "Prisma", "Docker"],
+    accent: "#92c3e4",
+    gradient: "bg-linear-135 from-[#92c3e4] to-[#5EBEFF]",
+    members: ["alexis-djs"],
+    link: {
+      liveDemo: "https://cookbynolan.vercel.app/",
+    }
   }
 ]
 
