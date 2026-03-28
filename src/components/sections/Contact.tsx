@@ -45,10 +45,10 @@ export default function Contact() {
     }
   };
   return (
-    <SZSection id="contact" className="flex flex-col justify-center items-center gap-20">
+    <SZSection id="contact" className="flex flex-col justify-center items-center gap-16 md:gap-20 py-24 md:py-0">
       <div className="flex flex-col items-center justify-center gap-5">
         <Badge status={false} text="Contact"/>
-        <h2 className="font-display text-5xl font-extrabold leading-none text-center">
+        <h2 className="font-display text-4xl md:text-5xl font-extrabold leading-none text-center">
           Parlons de votre{" "}
           <span className="gradient-text-blue">prochain projet.</span>
         </h2>
@@ -57,7 +57,7 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="grid grid-cols-[1fr_1.6fr] items-start gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] items-start gap-6 md:gap-8">
         <div className="flex flex-col gap-4">
           {contact.map((item) => (
           <Link href={item.url} key={item.label} style={{ '--hover-color': `${item.color}50` } as React.CSSProperties} className="flex flex-row items-center gap-4 bg-bg-card border border-border-card p-4 rounded-xl hover:bg-bg-dark relative hover:translate-y-0.5 transition-all duration-500 hover:border-(--hover-color) cursor-pointer" >
@@ -102,7 +102,7 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-rows-2 md:grid-cols-2 gap-6">
                   <GroupInput label="Nom" id="name" type="text" placeholder="John Doe" required value={form.name} onChange={handleChange} />
                   <GroupInput label="Email" id="email" type="email" placeholder="john.doe@email.com" required value={form.email} onChange={handleChange} />
                 </div>
