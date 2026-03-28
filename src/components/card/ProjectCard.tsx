@@ -7,7 +7,7 @@ import { teamMembers } from "../../../data/sz/team";
 
 export function ProjectCardHorizontal({ project }: { project: Project }) {
   return (
-    <div key={project.id} className="grid grid-rows-[1fr_2fr] md:grid-cols-[1fr_2fr] bg-bg-card border border-border-card rounded-xl overflow-hidden hover:bg-bg-dark transition-colors cursor-pointer"> 
+    <div key={project.id} className="grid grid-rows-[1fr_2fr] md:grid-rows-none md:grid-cols-[1fr_2fr] bg-bg-card border border-border-card rounded-xl overflow-hidden hover:bg-bg-dark transition-colors cursor-pointer"> 
       <div className={`${project.gradient} min-w-60 flex items-center justify-center relative overflow-hidden`}>
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.3)] backdrop-blur-sm"/>
         <span className="font-display text-[80px] font-extrabold text-[rgba(255,255,255,0.15)] relative z-10">{project.id}</span>

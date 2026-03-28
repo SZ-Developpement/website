@@ -102,7 +102,7 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <div className="grid grid-rows-2 md:grid-cols-2 gap-6">
+                <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 gap-6">
                   <GroupInput label="Nom" id="name" type="text" placeholder="John Doe" required value={form.name} onChange={handleChange} />
                   <GroupInput label="Email" id="email" type="email" placeholder="john.doe@email.com" required value={form.email} onChange={handleChange} />
                 </div>
