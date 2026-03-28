@@ -7,10 +7,10 @@ import Link from "next/link";
 
 export default function Team() {
   return (
-    <SZSection id="team" className="flex flex-col justify-center items-center gap-20">
+    <SZSection id="team" className="flex flex-col justify-center items-center gap-16 md:gap-20 py-24 md:py-0">
       <div className="flex flex-col items-center justify-center gap-5">
         <Badge status={false} text="L'équipe"/>
-        <h2 className="font-display text-5xl font-extrabold leading-none text-center">
+        <h2 className="font-display text-4xl md:text-5xl font-extrabold leading-none text-center">
           Derrière le code,{" "}
           <span className="gradient-text">la prochaine vague.</span>
         </h2>
@@ -22,7 +22,7 @@ export default function Team() {
 
       </div>
 
-      <div className="col-span-2 grid grid-cols-3 gap-4">
+      <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {teamMembers.slice(0, 6).map((member) => (
           <UserCardView key={member.id} member={member} />
         ))}
