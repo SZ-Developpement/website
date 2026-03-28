@@ -5,10 +5,10 @@ import { TagsImage } from "../ui/tags";
 
 export default function Stack() {
   return (
-    <SZSection id="stack" className="flex flex-col justify-center items-center gap-20">
+    <SZSection id="stack" className="flex flex-col justify-center items-center gap-16 md:gap-20 py-24 md:py-0">
       <div className="flex flex-col items-center justify-center gap-5">
         <Badge status={false} text="Stack technique"/>
-        <h2 className="font-display text-5xl font-extrabold leading-none text-center">
+        <h2 className="font-display text-4xl md:text-5xl font-extrabold leading-none text-center">
           Les outils qui font{" "}
           <span className="gradient-text-blue">la différence.</span>
         </h2>
@@ -18,7 +18,7 @@ export default function Stack() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
         {toolsCategories.map((cat) => (
           <div key={cat.label} className="flex flex-col gap-4 bg-bg-card border border-border-card p-6 rounded-xl hover:bg-bg-dark relative hover:translate-y-0.5 transition-all duration-500 cursor-pointer" >
             <div className="flex flex-row gap-4 items-center">
