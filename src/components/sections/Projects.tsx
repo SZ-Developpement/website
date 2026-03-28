@@ -7,10 +7,10 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <SZSection id="projects" className="flex flex-col justify-center items-center gap-20">
+    <SZSection id="projects" className="flex flex-col justify-center items-center gap-16 md:gap-20 py-24 md:py-0">
       <div className="flex flex-col items-center justify-center gap-5">
         <Badge status={false} text="Projets"/>
-        <h2 className="font-display text-5xl font-extrabold leading-none text-center">
+        <h2 className="font-display text-4xl md:text-5xl font-extrabold leading-none text-center">
           Ce que nous avons{" "}
           <span className="gradient-text">construit.</span>
         </h2>
