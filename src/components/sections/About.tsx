@@ -6,13 +6,13 @@ import { Badge } from "../ui/badge";
 
 export default function About() {
   return (
-    <SZSection id="about" className="flex flex-col justify-center items-center gap-20">
+    <SZSection id="about" className="flex flex-col justify-center items-center gap-16 md:gap-20 py-24 md:py-0">
       
-      <div className="grid grid-cols-2 items-center gap-20">
-        <div className="flex flex-col gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-20">
+        <div className="flex flex-col gap-8 md:gap-10">
           <div className="flex flex-col gap-6">
             <Badge text="À propos" status={false} />
-            <h2 className="font-display text-5xl font-extrabold leading-none">
+            <h2 className="font-display text-4xl md:text-5xl font-extrabold leading-none">
               Des étudiants qui codent{" "}
               <span className="gradient-text-blue">comme des pros.</span>
             </h2>
@@ -30,12 +30,12 @@ export default function About() {
           </div>
         </div>
 
-        <div className="relative flex flex-col px-10">
+        <div className="relative flex flex-col px-0 md:px-10">
           <StatsCard stats={stats} />
         </div>
       </div>
 
-      <div className="col-span-2 grid grid-cols-3 gap-4">
+      <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {values.map((value) => (
           <AboutCard key={value.title} about={value} />
         ))}
