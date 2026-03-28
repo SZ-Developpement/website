@@ -9,12 +9,12 @@ import { SZSocial } from "../../../data/sz/social";
 
 export default function Hero() {
   return (
-    <SZSection id="hero" className="grid grid-cols-2 items-center gap-20">
-      <div className="flex flex-col gap-10">
+    <SZSection id="hero" className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-20 py-24 md:py-0">
+      <div className="flex flex-col gap-8 md:gap-10">
         <div className="flex flex-col gap-4">
           <Badge text="Étudiants en dev · Projets ouverts" />
 
-          <h1 className="font-display text-7xl font-extrabold leading-none">
+          <h1 className="font-display text-[42px] sm:text-6xl md:text-7xl font-extrabold leading-none">
             Nous sommes la
             <br />
             <span className="gradient-text-blue">prochaine</span>
@@ -42,14 +42,14 @@ export default function Hero() {
         <div className="flex flex-row items-center gap-10">
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col gap-1 items-start">
-              <span className="px-1 text-3xl font-bold text-text-primary font-display">{stat.val}</span>
-              <span className="text-sm text-text-secondary">{stat.label}</span>
+              <span className="px-1 text-2xl md:text-3xl font-bold text-text-primary font-display">{stat.val}</span>
+              <span className="text-xs md:text-sm text-text-secondary">{stat.label}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="relative flex items-center justify-center">
+      <div className="hidden md:flex relative items-center justify-center">
         <HeroTerminalCard />
         <FloatingBadge />
       </div>
