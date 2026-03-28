@@ -17,10 +17,10 @@ export default function Projects() {
   return (
     <>
     <Header />
-      <SZSectionPage id="projects" className="flex flex-col items-center gap-15">
+      <SZSectionPage id="projects" className="flex flex-col items-center gap-12 md:gap-15">
         <div className="flex flex-col gap-5 w-full">
           <Badge text="Réalisations" status={false} />
-          <h2 className="font-display text-6xl font-extrabold leading-none">
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-none">
             Ce qu&apos;on a{" "}
             <span className="gradient-text-blue">construit.</span>
           </h2>
@@ -49,7 +49,7 @@ export default function Projects() {
             })}
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {filtered.map((project) => (
               <ProjectCardImage
                 key={project.id}
