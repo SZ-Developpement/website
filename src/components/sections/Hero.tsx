@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="flex flex-col gap-4">
           <Badge text="Étudiants en dev · Projets ouverts" />
 
-          <h1 className="font-display text-[42px] sm:text-6xl md:text-7xl font-extrabold leading-none">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold leading-none">
             Nous sommes la
             <br />
             <span className="gradient-text-blue">prochaine</span>

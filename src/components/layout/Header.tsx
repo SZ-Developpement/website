@@ -26,7 +26,7 @@ function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-100 duration-200 border-b" style={{ borderBottom: scrolled ? "1px solid #252525" : "1px solid transparent", background: scrolled ? "rgba(0,0,0,0.85)" : "transparent", backdropFilter: scrolled ? "blur(16px)" : "none", }} >
-        <nav className="max-w-300 px-6 mx-auto h-16 grid grid-cols-2 md:grid-cols-4 items-center">
+        <nav className="max-w-6xl px-6 mx-auto h-16 grid grid-cols-2 md:grid-cols-4 items-center">
           <Link href="/" className="font-display font-bold text-base cursor-pointer">SZ<span className="text-sz">-</span>Dev</Link>
 
           <ul className="hidden md:flex flex-row gap-8 justify-center items-center col-span-2">
