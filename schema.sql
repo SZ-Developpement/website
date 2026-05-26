@@ -7,25 +7,24 @@ DROP TABLE IF EXISTS projects CASCADE;
 DROP TABLE IF EXISTS members CASCADE;
 DROP TABLE IF EXISTS admins CASCADE;
 
--- Admins
+-- Admins (toute l'équipe se connecte ici)
 CREATE TABLE admins (
   id         SERIAL PRIMARY KEY,
   email      VARCHAR UNIQUE NOT NULL,
   password   VARCHAR NOT NULL,
+  member_id  VARCHAR,                     -- lien vers le profil membre
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Membres
+-- Membres (profil public visible sur la vitrine)
 CREATE TABLE members (
-  id           VARCHAR PRIMARY KEY,        -- ex: "alexis-djs"
-  email        VARCHAR UNIQUE,
-  password     VARCHAR,
+  id           VARCHAR PRIMARY KEY,
   name         VARCHAR NOT NULL,
-  alias        VARCHAR,                    -- @Flytzi
-  role         VARCHAR NOT NULL,           -- Fondateur & Développeur Full-Stack
-  specialties  TEXT[],                     -- ["Full Stack", "Architecture"]
-  formation    VARCHAR,                    -- BTS SIO SLAM - 1ère année
-  localisation VARCHAR,                    -- France
+  alias        VARCHAR,
+  role         VARCHAR NOT NULL,
+  specialties  TEXT[],
+  formation    VARCHAR,
+  localisation VARCHAR,
   age          INTEGER,
   bio          TEXT,
   github       VARCHAR,
@@ -39,9 +38,9 @@ CREATE TABLE members (
 -- Stack centralisée
 CREATE TABLE stack_items (
   id       SERIAL PRIMARY KEY,
-  name     VARCHAR UNIQUE NOT NULL,        -- "Next.js"
-  category VARCHAR NOT NULL,              -- "Frontend", "Backend"...
-  icon     VARCHAR                        -- slug devicon ou URL
+  name     VARCHAR UNIQUE NOT NULL,
+  category VARCHAR NOT NULL,
+  icon     VARCHAR
 );
 
 -- Liaison membre <-> stack
@@ -57,8 +56,8 @@ CREATE TABLE projects (
   slug        VARCHAR UNIQUE NOT NULL,
   name        VARCHAR NOT NULL,
   category    VARCHAR NOT NULL,
-  type        VARCHAR NOT NULL,            -- "solo" | "team"
-  status      VARCHAR NOT NULL,            -- "En cours" | "Terminé" | "À venir" | "archived"
+  type        VARCHAR NOT NULL,
+  status      VARCHAR NOT NULL,
   year        VARCHAR NOT NULL,
   short_desc  TEXT NOT NULL,
   long_desc   TEXT,
@@ -84,8 +83,3 @@ CREATE TABLE project_members (
   member_id  VARCHAR REFERENCES members(id) ON DELETE CASCADE,
   PRIMARY KEY (project_id, member_id)
 );
-
-
--- Ajouter un membre 
-INSERT INTO admins (email, password) 
-VALUES ('ton@email.com', 'le_hash_ici');
