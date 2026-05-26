@@ -1,4 +1,4 @@
-import { stats, values } from "../../../data/pages/about";
+import { stats, values } from "../../data/pages/about";
 import { AboutCard } from "../card/AboutCard";
 import { StatsCard } from "../card/StatsCard";
 import SZSection from "../layout/SZSection";
@@ -6,8 +6,10 @@ import { Badge } from "../ui/badge";
 
 export default function About() {
   return (
-    <SZSection id="about" className="flex flex-col justify-center items-center gap-16 md:gap-20 py-24 md:py-0">
-      
+    <SZSection
+      id="about"
+      className="flex flex-col justify-center items-center gap-16 md:gap-20 py-24 md:py-0"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-20">
         <div className="flex flex-col gap-8 md:gap-10">
           <div className="flex flex-col gap-6">
@@ -17,15 +19,17 @@ export default function About() {
               <span className="gradient-text-blue">comme des pros.</span>
             </h2>
             <p className="text-text-secondary font-normal">
-              On n&apos;attend pas d&apos;avoir 10 ans d&apos;expérience pour livrer de la qualité.
-              SZ-Developpement est né de cette conviction : les meilleures idées
-              viennent de ceux qui apprennent encore et refusent les mauvaises habitudes.
+              On n&apos;attend pas d&apos;avoir 10 ans d&apos;expérience pour
+              livrer de la qualité. SZ-Developpement est né de cette conviction
+              : les meilleures idées viennent de ceux qui apprennent encore et
+              refusent les mauvaises habitudes.
             </p>
 
             <p className="text-text-secondary font-normal">
-              On maîtrise les stacks modernes, on suit les standards de l&apos;industrie
-              et on apporte un regard neuf sur chaque projet. Du MVP rapide à
-              l&apos;architecture scalable, on s&apos;investit comme si c&apos;était le nôtre.
+              On maîtrise les stacks modernes, on suit les standards de
+              l&apos;industrie et on apporte un regard neuf sur chaque projet.
+              Du MVP rapide à l&apos;architecture scalable, on s&apos;investit
+              comme si c&apos;était le nôtre.
             </p>
           </div>
         </div>
@@ -40,7 +44,6 @@ export default function About() {
           <AboutCard key={value.title} about={value} />
         ))}
       </div>
-
     </SZSection>
   );
 }
