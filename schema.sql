@@ -22,7 +22,7 @@ CREATE TABLE members (
   name         VARCHAR NOT NULL,
   alias        VARCHAR,
   role         VARCHAR NOT NULL,
-  specialties  TEXT[],
+  spec         TEXT[],
   formation    VARCHAR,
   localisation VARCHAR,
   age          INTEGER,
