@@ -6,4 +6,11 @@ const NavItems = [
   { label: "Équipe", href: "/#team" },
 ];
 
-export { NavItems };
+const NavItemsAdmin = [
+  { label: "Dashboard", href: "/admin/" },
+  { label: "Utilisateurs", href: "/admin/profile" },
+  { label: "Projets", href: "/admin/projects" },
+  { label: "Équipe", href: "/admin/team" },
+];
+
+export { NavItems, NavItemsAdmin };
