@@ -1,13 +1,14 @@
+import SzSection from "../layout/szSection";
 import TeamsCard from "../card/TeamsCard";
 import { teams } from "@/lib/data/teams";
 
 export default function Teams() {
   return (
-    <section
+    <SzSection
       id="team"
-      className="max-w-7xl mx-auto flex flex-col gap-4 px-6 pb-8"
+      title="Équipe"
+      description="Les membres de notre équipe"
     >
-      <h2 className="eyebrow">Équipe</h2>
       <div className="grid sm:grid-cols-3 gap-4">
         {teams.map((team) => (
           <TeamsCard
@@ -22,6 +23,6 @@ export default function Teams() {
           />
         ))}
       </div>
-    </section>
+    </SzSection>
   );
 }

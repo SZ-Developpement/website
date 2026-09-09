@@ -1,19 +1,14 @@
 import ProjectCard from "../card/ProjectCard";
 import { projects } from "@/lib/data/projects";
+import SzSection from "../layout/szSection";
 
 export default function Projets() {
   return (
-    <section
+    <SzSection
       id="projects"
-      className="max-w-7xl mx-auto flex flex-col gap-4 px-6 pb-8"
+      title="Projets"
+      description="Les projets sur lesquels nous avons travaillé et que nous avons livrés"
     >
-      <div className="flex items-baseline justify-between">
-        <h2 className="eyebrow">Projets</h2>
-        <span className="text-xs text-white/30">
-          {projects.length} livrés, en production
-        </span>
-      </div>
-
       <div className="grid sm:grid-cols-4 gap-4">
         {projects.map((project) => (
           <ProjectCard
@@ -28,6 +23,6 @@ export default function Projets() {
           />
         ))}
       </div>
-    </section>
+    </SzSection>
   );
 }
