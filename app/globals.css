@@ -35,3 +35,15 @@ body {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.4);
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% / var(--repeats, 2)));
+  }
+}
+.animate-marquee {
+  animation: marquee 50s linear infinite;
+}
