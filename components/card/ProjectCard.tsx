@@ -23,7 +23,7 @@ export default function ProjectCard({
     <Link
       href={url}
       target="_blank"
-      className="bg-[#0a0a0b] border border-[rgba(255,255,255,0.08)] rounded-2xl transition-all duration-150 hover:border-[rgba(255,255,255,0.16)] hover:bg-[#0d0d0e] overflow-hidden flex flex-col group"
+      className="bg-[#0a0a0b] border border-transparent hover:border-[rgba(255,255,255,0.16)] rounded-2xl transition-all duration-150 hover:bg-[#0d0d0e] overflow-hidden flex flex-col group"
     >
       <div
         className="h-28 flex items-center justify-center relative overflow-hidden "
