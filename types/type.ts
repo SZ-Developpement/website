@@ -20,3 +20,13 @@ export interface ServicesCardProps {
   title: string;
   description: string;
 }
+
+export interface TeamsCardProps {
+  name: string;
+  role: string;
+  description: string;
+  githubUrl: string;
+  linkedinUrl: string;
+  color1: string;
+  color2: string;
+}
