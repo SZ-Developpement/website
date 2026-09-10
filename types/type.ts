@@ -39,3 +39,15 @@ export interface StepCardProps {
   title: string;
   description: string;
 }
+
+export interface HistoireEtapeProps {
+  when: string;
+  title: string;
+  description: string;
+}
+
+export interface HistoireLettreProps {
+  lettre: string;
+  mot: string;
+  sens: string;
+}
