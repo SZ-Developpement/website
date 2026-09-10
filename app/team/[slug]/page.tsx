@@ -51,7 +51,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
   if (!member) notFound();
 
   const memberProjects = projects.filter((project) =>
-    member.projects.includes(project.title),
+    project.members.includes(member.slug),
   );
 
   const firstName = member.name.split(" ")[0];
@@ -215,16 +215,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
           >
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {memberProjects.map((project) => (
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  year={project.year}
-                  category={project.category}
-                  url={project.url}
-                  icon={project.icon}
-                  backgroundColor={project.backgroundColor}
-                />
+                <ProjectCard key={project.title} {...project} />
               ))}
             </div>
           </SzSection>

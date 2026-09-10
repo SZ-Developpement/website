@@ -10,6 +10,7 @@ export const projects: ProjectCardProps[] = [
     url: "https://absolute-stream.vercel.app",
     icon: Play,
     backgroundColor: "#1e3a5f",
+    members: ["alexis-djs", "thomas-mtt"],
   },
 
   {
@@ -20,6 +21,7 @@ export const projects: ProjectCardProps[] = [
     url: "https://www.devisetfacture.fr",
     icon: FileText,
     backgroundColor: "#1f4d38",
+    members: ["alexis-djs"],
   },
 
   {
@@ -30,5 +32,6 @@ export const projects: ProjectCardProps[] = [
     url: "https://cookbynolan.vercel.app",
     icon: Utensils,
     backgroundColor: "#5f2d3a",
+    members: ["alexis-djs"],
   },
 ];

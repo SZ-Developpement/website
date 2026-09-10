@@ -1,5 +1,8 @@
 import { LucideIcon } from "lucide-react";
 
+/** slugs des membres : la source de verite est lib/data/teams.ts */
+export type TeamSlug = "alexis-djs" | "thomas-mtt" | "emma-lejalle";
+
 export interface ProjectCardProps {
   title: string;
   description: string;
@@ -8,11 +11,8 @@ export interface ProjectCardProps {
   url: string;
   icon: LucideIcon;
   backgroundColor: string;
-
-  developer?: {
-    name: string;
-    url: string;
-  }[];
+  /** membres ayant travaille sur le projet */
+  members: TeamSlug[];
 }
 
 export interface ServicesCardProps {
@@ -22,7 +22,7 @@ export interface ServicesCardProps {
 }
 
 export interface TeamsCardProps {
-  slug: string;
+  slug: TeamSlug;
   name: string;
   role: string;
   description: string;
@@ -50,8 +50,6 @@ export interface TeamMemberProps extends TeamsCardProps {
   /** noms tels qu'ecrits dans lib/data/stacks.ts */
   languages: string[];
   stack: string[];
-  /** titres tels qu'ecrits dans lib/data/projects.ts */
-  projects: string[];
 }
 
 export interface StepCardProps {

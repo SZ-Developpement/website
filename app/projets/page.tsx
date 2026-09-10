@@ -43,16 +43,7 @@ export default function ProjetsPage() {
 
           <div className="relative grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                year={project.year}
-                category={project.category}
-                url={project.url}
-                icon={project.icon}
-                backgroundColor={project.backgroundColor}
-              />
+              <ProjectCard key={project.title} {...project} />
             ))}
           </div>
         </section>
