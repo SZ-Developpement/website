@@ -12,7 +12,8 @@ export default function Teams() {
       <div className="grid sm:grid-cols-3 gap-4">
         {teams.map((team) => (
           <TeamsCard
-            key={team.name}
+            key={team.slug}
+            slug={team.slug}
             name={team.name}
             role={team.role}
             description={team.description}
