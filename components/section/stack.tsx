@@ -5,9 +5,14 @@ import SzSection from "../layout/szSection";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+const GAP = 48;
+
 function StackIcon({ icon }: { icon: (typeof stack)[number] }) {
   return (
-    <div className="flex flex-col items-center gap-2 shrink-0 w-16">
+    <div
+      className="flex flex-col items-center gap-2 shrink-0 w-16"
+      style={{ marginRight: GAP }}
+    >
       <Image
         src={icon.icon}
         alt={icon.name}
@@ -25,7 +30,7 @@ function StackIcon({ icon }: { icon: (typeof stack)[number] }) {
 export default function Stack() {
   const containerRef = useRef<HTMLDivElement>(null);
   const setRef = useRef<HTMLDivElement>(null);
-  // how many times we repeat the base set of icons to guarantee full coverage
+  // nombre de répétitions du set de base, pour couvrir n'importe quelle largeur d'écran
   const [repeats, setRepeats] = useState(2);
 
   useEffect(() => {
@@ -33,8 +38,8 @@ export default function Stack() {
       const containerWidth = containerRef.current?.offsetWidth ?? 0;
       const setWidth = setRef.current?.offsetWidth ?? 0;
       if (!setWidth) return;
-      // we need at least 2x the container width covered by content,
-      // so the -50% translate always has a full screen's worth behind it
+      // il faut au moins 2x la largeur du conteneur couverte,
+      // pour que la translation ait toujours un écran plein derrière elle
       const needed = Math.ceil((containerWidth * 2) / setWidth) + 1;
       setRepeats(Math.max(2, needed));
     }
@@ -66,24 +71,20 @@ export default function Stack() {
         }}
       >
         <div
-          className="flex gap-12 items-center w-max animate-marquee"
+          className="flex items-center w-max animate-marquee"
           style={{ "--repeats": repeats } as React.CSSProperties}
         >
-          {/* first set — measured as the reference width */}
-          <div ref={setRef} className="flex gap-12 items-center shrink-0">
-            {stack.map((icon, index) => (
-              <StackIcon key={index} icon={icon} />
-            ))}
-          </div>
-          {/* repeated sets to guarantee full-width coverage on any screen */}
-          {Array.from({ length: repeats - 1 }).map((_, i) => (
+          {/* chaque set fait exactement 100%/repeats de la piste : la boucle
+              retombe pile, quel que soit le nombre de répétitions */}
+          {Array.from({ length: repeats }).map((_, i) => (
             <div
               key={i}
-              className="flex gap-12 items-center shrink-0"
-              aria-hidden="true"
+              ref={i === 0 ? setRef : undefined}
+              className="flex items-center shrink-0"
+              aria-hidden={i === 0 ? undefined : true}
             >
               {stack.map((icon, index) => (
-                <StackIcon key={`${index}-${i}`} icon={icon} />
+                <StackIcon key={`${i}-${index}`} icon={icon} />
               ))}
             </div>
           ))}
