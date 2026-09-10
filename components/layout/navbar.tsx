@@ -7,17 +7,17 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-6 h-16 grid grid-cols-[250px_auto_250px] gap-4 items-center">
         {/* Gauche */}
         <div className="flex items-center gap-2.5">
-          <Link href="#hero" className="text-base font-semibold">
+          <Link href="/#hero" className="text-base font-semibold">
             SZ Dev
           </Link>
         </div>
 
         {/* Navigation */}
         <nav className="hidden sm:flex mx-auto items-center gap-1 text-sm text-white/45">
-          <ItemNav href="#projects">Projets</ItemNav>
-          <ItemNav href="#services">Services</ItemNav>
-          <ItemNav href="#process">Process</ItemNav>
-          <ItemNav href="#team">Équipe</ItemNav>
+          <ItemNav href="/#projects">Projets</ItemNav>
+          <ItemNav href="/#services">Services</ItemNav>
+          <ItemNav href="/#process">Process</ItemNav>
+          <ItemNav href="/#team">Équipe</ItemNav>
         </nav>
 
         {/* Droite */}
@@ -30,7 +30,7 @@ export default function NavBar() {
             <GitHubIcon size={18} />
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="rounded-lg bg-white text-gray-950 px-3.5 py-1.5 text-sm font-semibold hover:bg-white/90 transition"
           >
             Démarrer un projet
