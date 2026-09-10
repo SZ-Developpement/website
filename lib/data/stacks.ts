@@ -137,3 +137,12 @@ export const allLanguages = [
   { name: "SQL", icon: `${routes_languages}sql.svg` },
   { name: "Bash", icon: `${routes_languages}bash.svg` },
 ];
+
+// Retrouve le logo d'une techno a partir de son nom (langages + stack)
+export function getTechIcon(name: string) {
+  const match =
+    stack.find((item) => item.name === name) ??
+    allLanguages.find((item) => item.name === name);
+
+  return match?.icon ?? "/stack/no-img.svg";
+}
