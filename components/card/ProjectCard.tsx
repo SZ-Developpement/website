@@ -26,9 +26,13 @@ export default function ProjectCard({
       className="bg-[#0a0a0b] border border-transparent hover:border-[rgba(255,255,255,0.16)] rounded-2xl transition-all duration-150 hover:bg-[#0d0d0e] overflow-hidden flex flex-col group"
     >
       <div
-        className="h-28 flex items-center justify-center relative overflow-hidden "
+        className="h-28 flex items-center justify-center relative overflow-hidden"
         style={{
-          background: `radial-gradient(circle at 30% 20%, ${backgroundColor}, #0a0a0b 70%)`,
+          background: [
+            `radial-gradient(circle at 22% 18%, color-mix(in oklab, ${backgroundColor}, white 20%), transparent 58%)`,
+            `radial-gradient(circle at 82% 88%, color-mix(in oklab, ${backgroundColor}, black 30%), transparent 60%)`,
+            "#0a0a0b",
+          ].join(", "),
         }}
       >
         <Icon size="30" className="text-white/70 relative" />
