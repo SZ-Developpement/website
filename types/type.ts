@@ -22,6 +22,7 @@ export interface ServicesCardProps {
 }
 
 export interface TeamsCardProps {
+  slug: string;
   name: string;
   role: string;
   description: string;
@@ -29,6 +30,28 @@ export interface TeamsCardProps {
   linkedinUrl: string;
   color1: string;
   color2: string;
+}
+
+export interface TeamMemberProps extends TeamsCardProps {
+  /** pseudo affiche au-dessus du nom, sans le @ */
+  pseudo: string;
+  /** couleur d'accent de la page membre (pseudo, liens, halo de l'avatar) */
+  accent: string;
+  formation: string;
+  location: string;
+  age: number;
+  /** specialites affichees a cote du role */
+  tags: string[];
+  /** image dans /public, sinon on retombe sur l'initiale en degrade */
+  avatar?: string;
+  portfolioUrl?: string;
+  /** bio longue affichee sur la page membre */
+  bio: string;
+  /** noms tels qu'ecrits dans lib/data/stacks.ts */
+  languages: string[];
+  stack: string[];
+  /** titres tels qu'ecrits dans lib/data/projects.ts */
+  projects: string[];
 }
 
 export interface StepCardProps {
