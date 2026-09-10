@@ -7,7 +7,7 @@ export default function SzSection({
 }: {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   children: React.ReactNode;
   ClassName?: string;
 }) {
@@ -18,7 +18,7 @@ export default function SzSection({
     >
       <div className="relative flex flex-col gap-1">
         <h2 className="text-xl font-semibold tracking-tight">{title}</h2>
-        <p className="text-xs text-white/40">{description}</p>
+        {description && <p className="text-xs text-white/40">{description}</p>}
       </div>
 
       {children}
