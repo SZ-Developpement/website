@@ -30,3 +30,12 @@ export interface TeamsCardProps {
   color1: string;
   color2: string;
 }
+
+export interface StepCardProps {
+  step: string;
+  color: string;
+  bgcolor: string;
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
