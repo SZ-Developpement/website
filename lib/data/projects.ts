@@ -7,7 +7,7 @@ export const projects: ProjectCardProps[] = [
     description: "Plateforme communautaire de notation pour films et séries.",
     year: 2025,
     category: "Streaming",
-    url: "absolute-stream.vercel.app",
+    url: "https://absolute-stream.vercel.app",
     icon: Play,
     backgroundColor: "#1e3a5f",
   },
