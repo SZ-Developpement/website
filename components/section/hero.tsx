@@ -1,6 +1,9 @@
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center">
+    <section
+      id="hero"
+      className="relative flex flex-col items-center justify-center"
+    >
       {/* bg */}
       <div className="absolute inset-0 grid-fade pointer-events-none" />
 

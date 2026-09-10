@@ -7,7 +7,9 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-6 h-16 grid grid-cols-[250px_auto_250px] gap-4 items-center">
         {/* Gauche */}
         <div className="flex items-center gap-2.5">
-          <span className="text-base font-semibold">SZ Dev</span>
+          <Link href="#hero" className="text-base font-semibold">
+            SZ Dev
+          </Link>
         </div>
 
         {/* Navigation */}
