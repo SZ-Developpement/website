@@ -4,6 +4,7 @@ import { LinkedinIcon } from "../icon/linkedin";
 import Link from "next/link";
 
 export default function TeamsCard({
+  slug,
   name,
   role,
   description,
@@ -13,7 +14,12 @@ export default function TeamsCard({
   color2,
 }: TeamsCardProps) {
   return (
-    <div className="bg-[#0a0a0b] p-5 border border-transparent hover:border-[rgba(255,255,255,0.16)] rounded-2xl transition-all duration-200 hover:bg-[#0d0d0e] overflow-hidden flex flex-col gap-4 group">
+    <div className="relative bg-[#0a0a0b] p-5 border border-transparent hover:border-[rgba(255,255,255,0.16)] rounded-2xl transition-all duration-200 hover:bg-[#0d0d0e] overflow-hidden flex flex-col gap-4 group">
+      <Link
+        href={`/team/${slug}`}
+        aria-label={`Voir le profil de ${name}`}
+        className="absolute inset-0 z-0"
+      />
       {/* Image Infos */}
       <div className="flex flex-row gap-4 items-center justify-start">
         <div
@@ -34,7 +40,7 @@ export default function TeamsCard({
       <p className="text-xs text-white/40 leading-relaxed">{description}</p>
 
       {/* Social Links */}
-      <div className="flex items-center gap-2">
+      <div className="relative z-10 flex items-center gap-2 mt-auto">
         <Link
           href={githubUrl}
           target="_blank"
@@ -50,6 +56,10 @@ export default function TeamsCard({
         >
           <LinkedinIcon size={14} />
         </Link>
+
+        <span className="ml-auto text-xs text-white/30 group-hover:text-white/60 transition">
+          Voir le profil →
+        </span>
       </div>
     </div>
   );
