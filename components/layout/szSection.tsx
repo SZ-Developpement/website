@@ -14,7 +14,7 @@ export default function SzSection({
   return (
     <section
       id={id}
-      className={`max-w-7xl mx-auto flex flex-col gap-6 px-6 relative overflow-hidden ${ClassName}`}
+      className={`max-w-7xl w-full mx-auto flex flex-col gap-6 px-6 relative overflow-hidden ${ClassName}`}
     >
       <div className="relative flex flex-col gap-1">
         <h2 className="text-xl font-semibold tracking-tight">{title}</h2>
