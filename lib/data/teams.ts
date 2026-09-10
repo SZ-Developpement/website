@@ -57,7 +57,7 @@ export const teams: TeamMemberProps[] = [
     portfolioUrl: "https://thomas-montout.github.io/Portfolio/",
     languages: ["JavaScript", "PHP", "SQL", "HTML", "CSS"],
     stack: ["Node.js", "Phaser", "Next.js", "React"],
-    projects: [],
+    projects: ["Absolute Stream"],
     accent: "#50E3C2",
     color1: "#50E3C2",
     color2: "#0070F3",
