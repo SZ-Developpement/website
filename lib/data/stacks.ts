@@ -72,7 +72,7 @@ export const stack = [
   },
   {
     name: "MySQL",
-    icon: `${routes_database}mysql.svg`,
+    icon: `${routes_languages}mysql.svg`,
     category: "Base de données",
   },
 
@@ -116,7 +116,7 @@ export const stack = [
     icon: `${routes_tools}storybook.svg`,
     category: "Outils",
   },
-  { name: "Kali Linux", icon: `${routes_tools}Kali.svg`, category: "Outils" },
+  { name: "Kali Linux", icon: `${routes_tools}kali.svg`, category: "Outils" },
   { name: "Cisco", icon: `${routes_tools}cisco.svg`, category: "Outils" },
   { name: "Claude AI", icon: `${routes_tools}claude.svg`, category: "Outils" },
 ];
