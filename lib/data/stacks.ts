@@ -146,3 +146,13 @@ export function getTechIcon(name: string) {
 
   return match?.icon ?? "/stack/no-img.svg";
 }
+
+/**
+ * Logos entierement blancs : invisibles sur fond clair, on les inverse.
+ * Liste verifiee en analysant les fills de chaque SVG de /public/stack.
+ */
+const MONOCHROME_WHITE = ["Vercel", "SQL", "iOS"];
+
+export function isWhiteOnlyLogo(name: string) {
+  return MONOCHROME_WHITE.includes(name);
+}
