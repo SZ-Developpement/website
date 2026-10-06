@@ -1,6 +1,6 @@
 "use client";
 
-import { stack } from "@/lib/data/stacks";
+import { stack, isWhiteOnlyLogo } from "@/lib/data/stacks";
 import SzSection from "../layout/szSection";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -18,9 +18,11 @@ function StackIcon({ icon }: { icon: (typeof stack)[number] }) {
         alt={icon.name}
         width={24}
         height={24}
-        className="h-6 w-6 shrink-0 opacity-50 hover:opacity-90 transition"
+        className={`h-6 w-6 shrink-0 opacity-70 dark:opacity-50 hover:opacity-100 dark:hover:opacity-90 transition ${
+          isWhiteOnlyLogo(icon.name) ? "logo-invert-light" : ""
+        }`}
       />
-      <span className="text-[11px] text-white/50 text-center leading-tight whitespace-nowrap">
+      <span className="text-[11px] text-foreground/50 text-center leading-tight whitespace-nowrap">
         {icon.name}
       </span>
     </div>

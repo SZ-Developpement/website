@@ -23,31 +23,25 @@ export default function ProjectCard({
     <Link
       href={url}
       target="_blank"
-      className="bg-[#0a0a0b] border border-transparent hover:border-[rgba(255,255,255,0.16)] rounded-2xl transition-all duration-150 hover:bg-[#0d0d0e] overflow-hidden flex flex-col group"
+      className="bg-card border border-transparent shadow-card hover:border-foreground/15 rounded-2xl transition-all duration-150 hover:bg-card-hover overflow-hidden flex flex-col group"
     >
       <div
-        className="h-28 flex items-center justify-center relative overflow-hidden"
-        style={{
-          background: [
-            `radial-gradient(circle at 22% 18%, color-mix(in oklab, ${backgroundColor}, white 20%), transparent 58%)`,
-            `radial-gradient(circle at 82% 88%, color-mix(in oklab, ${backgroundColor}, black 30%), transparent 60%)`,
-            "#0a0a0b",
-          ].join(", "),
-        }}
+        className="project-mesh h-28 flex items-center justify-center relative overflow-hidden"
+        style={{ "--project-color": backgroundColor } as React.CSSProperties}
       >
-        <Icon size="30" className="text-white/70 relative" />
+        <Icon size="30" className="text-foreground/70 relative" />
       </div>
 
       {/* Card content */}
       <div className="p-5 flex flex-col flex-1">
-        <div className="text-xs text-white/35 mb-2">
+        <div className="text-xs text-foreground/35 mb-2">
           {year} · {category}
         </div>
         <div className="font-medium text-sm mb-1">{title}</div>
-        <div className="text-xs text-white/40 leading-relaxed flex-1">
+        <div className="text-xs text-foreground/40 leading-relaxed flex-1">
           {description}
         </div>
-        <div className="text-xs text-white/30 mt-3 group-hover:text-white/60 transition">
+        <div className="text-xs text-foreground/30 mt-3 group-hover:text-foreground/60 transition">
           {removeDomainFromUrl(url)} →
         </div>
       </div>

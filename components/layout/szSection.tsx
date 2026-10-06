@@ -22,7 +22,7 @@ export default function SzSection({
         <div className="flex flex-col gap-1">
           <h2 className="text-xl font-semibold tracking-tight">{title}</h2>
           {description && (
-            <p className="text-xs text-white/40">{description}</p>
+            <p className="text-xs text-foreground/40">{description}</p>
           )}
         </div>
 

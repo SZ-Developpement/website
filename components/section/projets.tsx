@@ -19,7 +19,7 @@ export default function Projets() {
         hasMore ? (
           <Link
             href="/projets"
-            className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/3 px-3 py-1.5 text-xs text-white/60 hover:bg-white/6 hover:text-white transition-all duration-150 outline-0 focus-visible:border-white/30 group"
+            className="flex items-center gap-1.5 rounded-lg border border-foreground/10 bg-foreground/3 px-3 py-1.5 text-xs text-foreground/60 hover:bg-foreground/6 hover:text-foreground transition-all duration-150 outline-0 focus-visible:border-foreground/30 group"
           >
             Voir plus
             <ArrowRight

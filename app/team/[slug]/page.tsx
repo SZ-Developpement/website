@@ -66,7 +66,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
           {/* Flèche de retour */}
           <Link
             href="/#team"
-            className="relative flex items-center gap-1.5 text-xs text-white/40 hover:text-white transition w-fit group"
+            className="relative flex items-center gap-1.5 text-xs text-foreground/40 hover:text-foreground transition w-fit group"
           >
             <ArrowLeft
               size={13}
@@ -87,12 +87,12 @@ export default async function TeamMemberPage({ params }: PageProps) {
                   @{member.pseudo}
                 </span>
 
-                <span className="flex items-center gap-1.5 text-white/40">
+                <span className="flex items-center gap-1.5 text-foreground/40">
                   <GraduationCap size={13} />
                   {member.formation}
                 </span>
 
-                <span className="flex items-center gap-1.5 text-white/40">
+                <span className="flex items-center gap-1.5 text-foreground/40">
                   <MapPin size={13} />
                   {member.location} · {member.age} ans
                 </span>
@@ -108,12 +108,12 @@ export default async function TeamMemberPage({ params }: PageProps) {
                 <h2 className="text-lg sm:text-xl font-medium">
                   {member.role}
                 </h2>
-                <span className="text-sm text-white/30">
+                <span className="text-sm text-foreground/30">
                   {member.tags.join(" · ")}
                 </span>
               </div>
 
-              <p className="max-w-2xl text-sm text-white/50 leading-relaxed">
+              <p className="max-w-2xl text-sm text-foreground/50 leading-relaxed">
                 {member.bio}
               </p>
 
@@ -147,7 +147,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
 
             {/* Avatar */}
             <div
-              className="size-40 sm:size-50 rounded-2xl overflow-hidden border border-white/10 shrink-0 order-first lg:order-0"
+              className="brand-gradient size-40 sm:size-50 rounded-2xl overflow-hidden border border-foreground/10 shrink-0 order-first lg:order-0"
               style={{
                 background: `linear-gradient(135deg, ${member.color1}, ${member.color2})`,
               }}
@@ -171,9 +171,9 @@ export default async function TeamMemberPage({ params }: PageProps) {
 
         {/* Compétences */}
         <section className="max-w-7xl w-full mx-auto px-6">
-          <div className="border-t border-white/10 pt-10 grid lg:grid-cols-2 gap-10">
+          <div className="border-t border-foreground/10 pt-10 grid lg:grid-cols-2 gap-10">
             <div className="flex flex-col gap-4">
-              <h2 className="text-sm text-white/50">Langages</h2>
+              <h2 className="text-sm text-foreground/50">Langages</h2>
               <div className="flex flex-wrap gap-2">
                 {member.languages.map((name) => (
                   <TechCard key={name} name={name} />
@@ -182,7 +182,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h2 className="text-sm text-white/50">Stack &amp; Outils</h2>
+              <h2 className="text-sm text-foreground/50">Stack &amp; Outils</h2>
               <div className="flex flex-wrap gap-2">
                 {member.stack.map((name) => (
                   <TechCard key={name} name={name} />
@@ -203,7 +203,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
             action={
               <Link
                 href="/projets"
-                className="flex items-center gap-1.5 text-xs text-white/40 hover:text-white transition group"
+                className="flex items-center gap-1.5 text-xs text-foreground/40 hover:text-foreground transition group"
               >
                 Voir tous les projets
                 <ArrowRight
@@ -238,7 +238,7 @@ function ProfileLink({
     <Link
       href={href}
       target="_blank"
-      className="flex items-center gap-2 rounded-xl border border-white/10 bg-[#0a0a0b] px-3.5 py-2 text-xs text-white/60 hover:text-white hover:border-white/20 hover:bg-[#0d0d0e] transition-all duration-200"
+      className="flex items-center gap-2 rounded-xl border border-foreground/10 bg-card px-3.5 py-2 text-xs text-foreground/60 hover:text-foreground hover:border-foreground/20 hover:bg-card-hover transition-all duration-200"
     >
       <Icon size={14} />
       {label}

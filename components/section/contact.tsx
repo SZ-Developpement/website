@@ -10,12 +10,12 @@ export default function Contact() {
         <h2 className="text-2xl font-semibold tracking-tight ">
           Un projet en tête ?
         </h2>
-        <p className="text-white/40 text-sm">Réponse sous 48h.</p>
+        <p className="text-foreground/40 text-sm">Réponse sous 48h.</p>
       </div>
 
       <Link
         href="mailto:contact.szdev@gmail.com"
-        className="rounded-lg bg-white text-gray-950 px-4 py-2 text-sm font-semibold hover:bg-white/90 transition"
+        className="rounded-lg bg-foreground text-background px-4 py-2 text-sm font-semibold hover:bg-foreground/90 transition"
       >
         contact.szdev@gmail.com
       </Link>

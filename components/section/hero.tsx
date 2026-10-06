@@ -12,7 +12,7 @@ export default function Hero() {
         <h1 className="text-[40px] sm:text-[48px] leading-[1.1] font-semibold tracking-tight">
           Deux lettres. Une exigence.
         </h1>
-        <p className="text-white/45 text-base max-w-xl">
+        <p className="text-foreground/45 text-base max-w-xl">
           Formés au développement, on construit vos apps web et mobile de
           l&apos;architecture au déploiement, sans sous-traiter un maillon.
         </p>

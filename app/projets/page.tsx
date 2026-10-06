@@ -24,7 +24,7 @@ export default function ProjetsPage() {
           <div className="relative flex flex-col gap-4">
             <Link
               href="/"
-              className="flex items-center gap-1.5 text-xs text-white/40 hover:text-white transition w-fit group"
+              className="flex items-center gap-1.5 text-xs text-foreground/40 hover:text-foreground transition w-fit group"
             >
               <ArrowLeft
                 size={13}
@@ -35,7 +35,7 @@ export default function ProjetsPage() {
 
             <div className="flex flex-col gap-1">
               <h1 className="text-2xl font-semibold tracking-tight">Projets</h1>
-              <p className="text-xs text-white/40">
+              <p className="text-xs text-foreground/40">
                 {projects.length} projets conçus et livrés de bout en bout.
               </p>
             </div>
