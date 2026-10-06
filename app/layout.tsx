@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Inter } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "@/components/layout/themeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,11 +44,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // suppressHydrationWarning : next-themes ecrit la class sur <html>
+    // avant l hydratation, React signalerait sinon un mismatch
     <html
+      suppressHydrationWarning
       lang="fr"
       className={`${geistSans.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
