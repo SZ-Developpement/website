@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Inter } from "next/font/google";
+import { Instrument_Serif, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+/** serif haute-graisse, reservee aux titres en italique */
+const display = Instrument_Serif({
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-display",
 });
 
-const inter = Inter({
-  variable: "--font-inter-sans",
+/** grotesque compacte, tout le reste */
+const sans = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 const SITE = "https://www.sz-dev.fr";
@@ -64,7 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="fr"
-      className={`${geistSans.variable} ${inter.variable} h-full antialiased`}
+      className={`${display.variable} ${sans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
