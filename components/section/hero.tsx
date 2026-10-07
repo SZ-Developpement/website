@@ -7,7 +7,8 @@ export default function Hero() {
     <Section
       id="hero"
       className="relative overflow-hidden"
-      contentClassName="pt-28 flex flex-col items-center gap-6 text-center"
+      padding="pt-28 pb-24"
+      contentClassName="flex flex-col items-center gap-6 text-center"
     >
       {/* Grille + halo : le fond du hero, et de lui seul */}
       <div

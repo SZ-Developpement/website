@@ -2,6 +2,7 @@ export default function Section({
   id,
   className = "",
   contentClassName = "",
+  padding = "py-24",
   children,
 }: {
   id: string;
@@ -9,12 +10,19 @@ export default function Section({
   className?: string;
   /** s'applique au conteneur interieur : mise en page du contenu */
   contentClassName?: string;
+  /**
+   * Rythme vertical. C'est une prop et non une classe par defaut concatenee :
+   * deux utilitaires Tailwind en conflit (py-24 py-12) se resolvent par leur
+   * ordre dans la feuille generee, pas par leur ordre dans l'attribut class.
+   * py-24 gagnerait donc toujours. Ici la valeur est remplacee, pas ajoutee.
+   */
+  padding?: string;
   children: React.ReactNode;
 }) {
   return (
     <section id={id} className={className}>
       <div
-        className={`mx-auto w-full max-w-7xl px-6 py-24 ${contentClassName}`}
+        className={`mx-auto w-full max-w-7xl px-6 ${padding} ${contentClassName}`}
       >
         {children}
       </div>
