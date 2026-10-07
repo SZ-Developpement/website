@@ -1,0 +1,72 @@
+import type { Metadata } from "next";
+import { Geist, Inter } from "next/font/google";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-inter-sans",
+  subsets: ["latin"],
+});
+
+const SITE = "https://www.sz-dev.fr";
+const TITRE = "SZ Dev";
+const DESCRIPTION =
+  "Studio de développement web et mobile. Applications Next.js, React et " +
+  "React Native conçues, développées et déployées de bout en bout. " +
+  "Réponse sous 48h.";
+
+export const metadata: Metadata = {
+  // indispensable : sans metadataBase, les URLs d'images Open Graph restent
+  // relatives et les apercus de partage cassent (LinkedIn, Discord, iMessage)
+  metadataBase: new URL(SITE),
+
+  title: {
+    default: TITRE,
+    // les sous-pages n'ecrivent plus que leur nom : "Projets" -> "Projets — SZ Dev"
+    template: "%s — SZ Dev",
+  },
+  description: DESCRIPTION,
+
+  alternates: { canonical: "/" },
+
+  applicationName: "SZ Dev",
+  authors: [{ name: "SZ Dev", url: SITE }],
+  creator: "SZ Dev",
+  publisher: "SZ Dev",
+
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: SITE,
+    siteName: "SZ Dev",
+    title: TITRE,
+    description: DESCRIPTION,
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: TITRE,
+    description: DESCRIPTION,
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html
+      lang="fr"
+      className={`${geistSans.variable} ${inter.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
+  );
+}
