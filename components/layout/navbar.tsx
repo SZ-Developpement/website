@@ -10,7 +10,7 @@ export default function NavBar() {
       >
         <Link
           href="/"
-          className="text-sm font-bold tracking-tight text-background"
+          className="whitespace-nowrap text-sm font-bold tracking-tight text-background"
         >
           SZ Dev
         </Link>
@@ -30,7 +30,7 @@ export default function NavBar() {
 
         <Link
           href="/#contact"
-          className="rounded-full bg-surface px-4 py-2 text-[13px] font-bold text-foreground transition-opacity hover:opacity-90"
+          className="whitespace-nowrap rounded-full bg-surface px-4 py-2 text-[13px] font-bold text-foreground transition-opacity hover:opacity-90"
         >
           Démarrer un projet
         </Link>
