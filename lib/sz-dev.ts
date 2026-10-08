@@ -1,4 +1,4 @@
-import { Crown } from "lucide-react";
+import { Globe, Layers, Rocket } from "lucide-react";
 import { PlanRateCardProps } from "./types";
 
 /** Reseaux et contact. */
@@ -53,7 +53,7 @@ export const engagements = [
 // Plans tarifaires.
 export const planRate: PlanRateCardProps[] = [
   {
-    icon: Crown,
+    icon: Globe,
     title: "Plan Basic",
     price: 9.99,
     desc: "Un plan de base pour commencer",
@@ -62,7 +62,7 @@ export const planRate: PlanRateCardProps[] = [
     cta: "commande",
   },
   {
-    icon: Crown,
+    icon: Layers,
     title: "Plan Pro",
     price: 19.99,
     desc: "Un plan professionnel pour les besoins avancés",
@@ -76,7 +76,7 @@ export const planRate: PlanRateCardProps[] = [
     cta: "devis",
   },
   {
-    icon: Crown,
+    icon: Rocket,
     title: "Plan Enterprise",
     price: 29.99,
     desc: "Un plan d'entreprise pour les grandes entreprises",

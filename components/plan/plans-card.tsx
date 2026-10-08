@@ -43,30 +43,35 @@ function PlanRateCard({
   cta,
 }: PlanRateCardProps) {
   return (
-    <div className="flex w-full flex-col justify-between gap-4 p-6">
-      <div className="flex flex-col gap-5">
-        <div className="flex flex-row items-center gap-4">
-          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl border border-line bg-surface">
+    <div className="flex w-full flex-col justify-between gap-7 p-7">
+      <div className="flex flex-col gap-6">
+        <div className="flex flex-row items-center gap-3.5">
+          <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl border border-line bg-surface">
             <Icon size={18} />
-          </div>
-          <h3 className="text-lg">{title}</h3>
+          </span>
+          <h3 className="text-lg font-semibold tracking-[-0.02em]">{title}</h3>
         </div>
 
-        <div className="flex flex-col gap-1">
-          <span className="text-xl font-medium">
-            {/* Prix formaté en français avec un espace insecable et le symbole euro */}
+        <div className="flex flex-col gap-1.5">
+          <span className="serif text-[15px] text-muted">à partir de</span>
+          {/* Prix du plan text qui change de taille selon la largeur de l'écran */}
+          <span className="text-[clamp(2rem,3.5vw,2.5rem)] font-extrabold leading-none tracking-[-0.045em]">
             {price.toLocaleString("fr-FR")}&nbsp;€
           </span>
-          <p className="text-sm text-muted">{desc}</p>
+          <p className="mt-1 text-sm leading-relaxed text-muted">{desc}</p>
         </div>
 
-        <ul className="flex flex-col gap-1">
+        <ul className="flex flex-col gap-2.5">
           {features.map((feature) => (
-            <li key={feature} className="flex flex-row items-center gap-1.5">
-              <span className="flex size-3 shrink-0 items-center justify-center rounded-full bg-foreground/20">
-                <span className="size-1 rounded-full bg-surface" />
+            <li
+              key={feature}
+              className="text-sm flex flex-row items-center gap-2.5"
+            >
+              {/* puce de la liste */}
+              <span className="flex size-3 shrink-0 items-center justify-center rounded-full border border-foreground/20">
+                <span className="size-1 rounded-full bg-foreground/45" />
               </span>
-              <p className="text-sm">{feature}</p>
+              {feature}
             </li>
           ))}
         </ul>
@@ -83,7 +88,7 @@ function PlanRateCard({
       ) : (
         <Link
           href={`mailto:${social.email}`}
-          className="flex w-full flex-row items-center justify-center border border-transparent gap-2 rounded-xl bg-foreground py-2 text-sm text-background transition-opacity duration-300 hover:opacity-70"
+          className="flex w-full flex-row items-center justify-center gap-2 rounded-xl border border-transparent bg-foreground py-2 text-sm text-background transition-opacity duration-300 hover:opacity-70"
         >
           Passer commande
         </Link>
