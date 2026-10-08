@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function PlansCard() {
   return (
-    <div className="w-full grid grid-cols-3 bg-[#e5e6eb] border border-black/5 rounded-3xl p-6">
+    <div className="w-full grid grid-cols-3 bg-[#e5e6eb] border border-black/5 rounded-3xl p-2">
       {planRate
         .filter((plan) => plan.devis === false)
         .map((plan, index) => (
@@ -89,7 +89,7 @@ function PlanRateCard({
         {devis ? (
           <Link
             href="#"
-            className="flex flex-row items-center gap-2 text-sm py-2 px-4 cursor-pointer hover:opacity-70 transition-all duration-300"
+            className="flex flex-row items-center gap-2 border border-black/10 rounded-xl text-sm py-2 px-4 cursor-pointer hover:opacity-70 transition-all duration-300"
           >
             Demander un devis
             <ChevronRight size={16} />
@@ -97,7 +97,7 @@ function PlanRateCard({
         ) : (
           <Link
             href="#"
-            className="flex flex-row items-center justify-center gap-2 bg-black/90 text-sm text-white py-2 w-full rounded-xl hover:opacity-70 cursor-pointer transition-all duration-300"
+            className="flex flex-row items-center justify-center gap-2 border border-transparent bg-black/90 text-sm text-white py-2 w-full rounded-xl hover:opacity-70 cursor-pointer transition-all duration-300"
           >
             Passer commande
           </Link>
