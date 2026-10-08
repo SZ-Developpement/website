@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function PlansCard() {
   return (
-    <div className="grid grid-cols-3 bg-[#e5e6eb] border border-black/5 rounded-3xl p-6">
+    <div className="w-full grid grid-cols-3 bg-[#e5e6eb] border border-black/5 rounded-3xl p-6">
       {planRate
         .filter((plan) => plan.devis === false)
         .map((plan, index) => (
