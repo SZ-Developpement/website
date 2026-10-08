@@ -1,3 +1,6 @@
+import { Crown } from "lucide-react";
+import { PlanRateCardProps } from "./types";
+
 /** Reseaux et contact. */
 export const social = {
   github: "https://github.com/SZ-Developpement",
@@ -45,4 +48,43 @@ export const engagements = [
   { valeur: "0", libelle: "Maillon", accent: "sous-traité" },
   // TODO: a confirmer — les deux premiers viennent de tes textes existants
   { valeur: "100%", libelle: "Du code", accent: "vous revient" },
+];
+
+// Plan des Tarifs : les différents plans proposés par SZ Dev, avec leurs caractéristiques et prix.
+export const planRate: PlanRateCardProps[] = [
+  {
+    icon: Crown,
+    title: "Plan Basic",
+    price: 9.99,
+    desc: "Un plan de base pour commencer",
+    features: ["Fonctionnalité 1", "Fonctionnalité 2", "Fonctionnalité 3"],
+    devis: false,
+  },
+  {
+    icon: Crown,
+    title: "Plan Pro",
+    price: 19.99,
+    desc: "Un plan professionnel pour les besoins avancés",
+    features: [
+      "Fonctionnalité 1",
+      "Fonctionnalité 2",
+      "Fonctionnalité 3",
+      "Fonctionnalité 4",
+    ],
+    devis: true,
+  },
+  {
+    icon: Crown,
+    title: "Plan Enterprise",
+    price: 29.99,
+    desc: "Un plan d'entreprise pour les grandes entreprises",
+    features: [
+      "Fonctionnalité 1",
+      "Fonctionnalité 2",
+      "Fonctionnalité 3",
+      "Fonctionnalité 4",
+      "Fonctionnalité 5",
+    ],
+    devis: true,
+  },
 ];
