@@ -50,7 +50,7 @@ export const engagements = [
   { valeur: "100%", libelle: "Du code", accent: "vous revient" },
 ];
 
-// Plan des Tarifs : les différents plans proposés par SZ Dev, avec leurs caractéristiques et prix.
+// Plans tarifaires.
 export const planRate: PlanRateCardProps[] = [
   {
     icon: Crown,
@@ -58,7 +58,8 @@ export const planRate: PlanRateCardProps[] = [
     price: 9.99,
     desc: "Un plan de base pour commencer",
     features: ["Fonctionnalité 1", "Fonctionnalité 2", "Fonctionnalité 3"],
-    devis: false,
+    highlight: false,
+    cta: "commande",
   },
   {
     icon: Crown,
@@ -71,7 +72,8 @@ export const planRate: PlanRateCardProps[] = [
       "Fonctionnalité 3",
       "Fonctionnalité 4",
     ],
-    devis: true,
+    highlight: true,
+    cta: "devis",
   },
   {
     icon: Crown,
@@ -85,6 +87,7 @@ export const planRate: PlanRateCardProps[] = [
       "Fonctionnalité 4",
       "Fonctionnalité 5",
     ],
-    devis: true,
+    highlight: true,
+    cta: "devis",
   },
 ];
