@@ -1,5 +1,5 @@
 import { Globe, Layers, Rocket } from "lucide-react";
-import { PlanRateCardProps } from "./types";
+import { MembreProps, PlanRateCardProps } from "./types";
 
 /** Reseaux et contact. */
 export const social = {
@@ -89,5 +89,39 @@ export const planRate: PlanRateCardProps[] = [
     ],
     highlight: true,
     cta: "devis",
+  },
+];
+
+// membre de l'entreprise
+export const membres: MembreProps = {
+  name: "Alexis DE JESUS",
+  pseudo: "Flytzi",
+  role: "Fondateur & développeur full-stack",
+  avatar: "https://avatars.githubusercontent.com/u/150966588?v=4",
+  bio: "Je conçois, développe et déploie vos applications de bout en bout. Vous avez un seul interlocuteur du premier échange à la mise en ligne — celui qui écrit le code.",
+  github: "https://github.com/FlytziTv",
+  linkedin: "https://www.linkedin.com/in/alexis-dejesus/",
+  portfolio: "https://www.aalexis.fr",
+};
+
+// intervenant ponctuel sur certains projets, selon les besoins
+export const intervenants: MembreProps[] = [
+  {
+    name: "Thomas MONTOUT",
+    pseudo: "Tae_Vie",
+    role: "Développeur back-end",
+    avatar: "https://avatars.githubusercontent.com/u/201229455?v=4",
+    bio: "Serveurs de jeux et APIs performantes. Intervient sur les projets où le back-end demande une architecture solide.",
+    github: "https://github.com/thomas-montout",
+    linkedin: "https://www.linkedin.com/in/thomas-montout",
+    portfolio: "https://thomas-montout.github.io/Portfolio/",
+  },
+  {
+    name: "Emma LE JALLÉ",
+    role: "Développeuse & cybersécurité",
+    avatar: "https://avatars.githubusercontent.com/u/159728921?v=4",
+    bio: "Audit de code et durcissement des accès. Intervient quand un projet manipule des données sensibles ou des paiements.",
+    github: "https://github.com/Emmalejalle",
+    linkedin: "https://www.linkedin.com/in/emma-le-jall%C3%A9-228283349/",
   },
 ];

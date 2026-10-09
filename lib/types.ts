@@ -11,3 +11,15 @@ export interface PlanRateCardProps {
   /** Action du bouton, independante de la mise en avant. */
   cta: "devis" | "commande";
 }
+
+export interface MembreProps {
+  name: string;
+  // pseudo sans le @
+  pseudo?: string;
+  role: string;
+  avatar: string;
+  bio: string;
+  github?: string;
+  linkedin?: string;
+  portfolio?: string;
+}
