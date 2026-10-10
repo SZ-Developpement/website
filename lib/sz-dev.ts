@@ -1,5 +1,12 @@
-import { Globe, Layers, Rocket } from "lucide-react";
-import { MembreProps, PlanRateCardProps } from "./types";
+import {
+  Globe,
+  Layers,
+  LayoutDashboard,
+  Rocket,
+  Smartphone,
+  Wrench,
+} from "lucide-react";
+import { MembreProps, PlanRateCardProps, ServiceProps } from "./types";
 
 /** Reseaux et contact. */
 export const social = {
@@ -13,7 +20,6 @@ export const navLinks = [
   { label: "Services", href: "/#services" },
   { label: "Réalisations", href: "/#realisations" },
   { label: "Méthode", href: "/#methode" },
-  { label: "Équipe", href: "/#equipe" },
 ] as const;
 
 export type StatusKey = "ok" | "busy" | "unknown";
@@ -123,5 +129,34 @@ export const intervenants: MembreProps[] = [
     bio: "Audit de code et durcissement des accès. Intervient quand un projet manipule des données sensibles ou des paiements.",
     github: "https://github.com/Emmalejalle",
     linkedin: "https://www.linkedin.com/in/emma-le-jall%C3%A9-228283349/",
+  },
+];
+
+// Services proposés par SZ Dev : ce que nous faisons pour nos clients, et comment nous le faisons.
+export const services: ServiceProps[] = [
+  {
+    icon: Globe,
+    titre: "Site vitrine",
+    desc: "Votre activité en ligne, rapide et trouvable. Des pages sur mesure, un contenu que vous modifiez vous-même, et le référencement travaillé dès la conception.",
+    tags: ["Next.js", "React", "SEO"],
+    highlight: true,
+  },
+  {
+    icon: LayoutDashboard,
+    titre: "Application web",
+    desc: "L'outil qui remplace vos tableurs. Comptes utilisateurs, base de données, espace d'administration — construit autour de votre façon de travailler, pas l'inverse.",
+    tags: ["Next.js", "PostgreSQL", "Stripe"],
+  },
+  {
+    icon: Smartphone,
+    titre: "Application mobile",
+    desc: "Disponible sur iOS et Android à partir d'une seule base de code. Un seul développement à payer, une seule application à faire évoluer ensuite.",
+    tags: ["React Native", "Expo"],
+  },
+  {
+    icon: Wrench,
+    titre: "Reprise de projet",
+    desc: "Un site qui rame, un prestataire parti sans transmettre, du code que personne ne comprend plus. Audit, reprise en main, remise en état.",
+    tags: ["Audit", "Refonte", "Maintenance"],
   },
 ];

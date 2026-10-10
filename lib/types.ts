@@ -23,3 +23,12 @@ export interface MembreProps {
   linkedin?: string;
   portfolio?: string;
 }
+
+export interface ServiceProps {
+  icon: LucideIcon;
+  titre: string;
+  desc: string;
+  tags: string[];
+  // optionnel, pour mettre en avant un service particulier
+  highlight?: boolean;
+}
